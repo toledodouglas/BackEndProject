@@ -19,6 +19,7 @@ namespace BackEnd.Project.DataAccess.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Product>().HasData(
                 new Product { Id = 1, Name = "Mouse", Description = "Mouse", InStock = true, Price = 180, Quantity = 5, ImageUrl = "" },
                 new Product { Id = 2, Name = "Teclado", Description = "Teclado", InStock = true, Price = 200, Quantity = 10, ImageUrl = "" },
@@ -27,13 +28,13 @@ namespace BackEnd.Project.DataAccess.Data
                 new Product { Id = 5, Name = "Notebook", Description = "Notebook gamer", InStock = true, Price = 4000, Quantity = 15, ImageUrl = "" },
                 new Product { Id = 6, Name = "Celular", Description = "IPhone", InStock = true, Price = 5000, Quantity = 8, ImageUrl = "" }
             );
-            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Client>().HasData(
-                new Client {Id = 1, Name = "", CPF = "", Email = "", CellPhone = "", City = "", State = "", Street = "" }
-                new Client { Id = 2, Name = "", CPF = "", Email = "", CellPhone = "", City = "", State = "", Street = "" }
-                new Client { Id = 3, Name = "", CPF = "", Email = "", CellPhone = "", City = "", State = "", Street = "" }
-                new Client { Id = 4, Name = "", CPF = "", Email = "", CellPhone = "", City = "", State = "", Street = "" }
-                new Client { Id = 5, Name = "", CPF = "", Email = "", CellPhone = "", City = "", State = "", Street = "" }
+                new Client { Id = 1, CPF = "139.142.890-07", CellPhone = "(49) 97382-6076", City = "Florianópolis", Email = "douglas1@gmail.com", Name = "Douglas", State = "Santa Catarina", Street = "Rua guilherme jacobe buch" },
+                new Client { Id = 2, CPF = "817.839.909-10", CellPhone = "(47) 98391-7448", City = "Florianópolis", Email = "liryel1@gmail.com", Name = "Liryel", State = "Santa Catarina", Street = "Rua João Jorge Mussi" },
+                new Client { Id = 3, CPF = "138.626.369-92", CellPhone = "(47) 98812-4127", City = "Florianópolis", Email = "lucca1@gamil.com", Name = "Lucca", State = "Santa Catarina", Street = "Rua Sergio Candido" },
+                new Client { Id = 4, CPF = "181.347.109-64", CellPhone = "(47) 97994-6368", City = "Florianópolis", Email = "beatriz1@gmail.com", Name = "Beatriz", State = "Santa Catarina", Street = "Av Rio Branco" },
+                new Client { Id = 5, CPF = "186.759.379-38", CellPhone = "(47) 99143-4539", City = "Florianópolis", Email = "amanda1@gmail.com", Name = "Amanda", State = "Santa Catarina", Street = "Rua Tenente Silveira" }
+
             );
         }
     }
