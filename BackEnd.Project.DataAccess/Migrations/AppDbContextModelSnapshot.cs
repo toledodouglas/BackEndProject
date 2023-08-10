@@ -120,8 +120,58 @@ namespace BackEnd.Project.DataAccess.Migrations
                             ImageUrl = "",
                             InStock = true,
                             Name = "Mouse",
-                            Price = 10m,
+                            Price = 180m,
                             Quantity = 5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Teclado",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Teclado",
+                            Price = 200m,
+                            Quantity = 10
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Monitor",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Monitor",
+                            Price = 1500m,
+                            Quantity = 10
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Fone sem fio",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Fone",
+                            Price = 150m,
+                            Quantity = 20
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Notebook gamer",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Notebook",
+                            Price = 4000m,
+                            Quantity = 15
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "IPhone",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Celular",
+                            Price = 5000m,
+                            Quantity = 8
                         });
                 });
 
@@ -189,10 +239,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -244,10 +290,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
-
-                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -329,32 +371,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("BackEnd.Project.Models.ApplicationUser", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PostalCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("BackEnd.Project.Models.Product", b =>
