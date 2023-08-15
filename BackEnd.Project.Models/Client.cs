@@ -15,7 +15,7 @@ namespace BackEnd.Project.Models
 
         [Required(ErrorMessage = "O CPF é obrigatório.")]
         [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "CPF inválido.")]
-        [StringLength(12, ErrorMessage = "A descrição deve ter no máximo 12 caracteres")]
+        [StringLength(15, ErrorMessage = "A descrição deve ter no máximo 12 caracteres")]
         public string CPF { get; set; }
 
         [EmailAddress(ErrorMessage = "O e-mail informado não é válido.")]

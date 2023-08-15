@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEnd.Project.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230810130923_addProductToDb")]
-    partial class addProductToDb
+    [Migration("20230810190429_addClientsToDb")]
+    partial class addClientsToDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,8 +35,8 @@ namespace BackEnd.Project.DataAccess.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("CellPhone")
                         .IsRequired()
@@ -71,6 +71,63 @@ namespace BackEnd.Project.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clients");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CPF = "139.142.890-07",
+                            CellPhone = "(49) 97382-6076",
+                            City = "Florianópolis",
+                            Email = "douglas1@gmail.com",
+                            Name = "Douglas",
+                            State = "Santa Catarina",
+                            Street = "Rua guilherme jacobe buch"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CPF = "817.839.909-10",
+                            CellPhone = "(47) 98391-7448",
+                            City = "Florianópolis",
+                            Email = "liryel1@gmail.com",
+                            Name = "Liryel",
+                            State = "Santa Catarina",
+                            Street = "Rua João Jorge Mussi"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CPF = "138.626.369-92",
+                            CellPhone = "(47) 98812-4127",
+                            City = "Florianópolis",
+                            Email = "lucca1@gamil.com",
+                            Name = "Lucca",
+                            State = "Santa Catarina",
+                            Street = "Rua Sergio Candido"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CPF = "181.347.109-64",
+                            CellPhone = "(47) 97994-6368",
+                            City = "Florianópolis",
+                            Email = "beatriz1@gmail.com",
+                            Name = "Beatriz",
+                            State = "Santa Catarina",
+                            Street = "Av Rio Branco"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CPF = "186.759.379-38",
+                            CellPhone = "(47) 99143-4539",
+                            City = "Florianópolis",
+                            Email = "amanda1@gmail.com",
+                            Name = "Amanda",
+                            State = "Santa Catarina",
+                            Street = "Rua Tenente Silveira"
+                        });
                 });
 
             modelBuilder.Entity("BackEnd.Project.Models.Product", b =>
@@ -123,8 +180,58 @@ namespace BackEnd.Project.DataAccess.Migrations
                             ImageUrl = "",
                             InStock = true,
                             Name = "Mouse",
-                            Price = 10m,
+                            Price = 180m,
                             Quantity = 5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Teclado",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Teclado",
+                            Price = 200m,
+                            Quantity = 10
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Monitor",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Monitor",
+                            Price = 1500m,
+                            Quantity = 10
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Fone sem fio",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Fone",
+                            Price = 150m,
+                            Quantity = 20
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Notebook gamer",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Notebook",
+                            Price = 4000m,
+                            Quantity = 15
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "IPhone",
+                            ImageUrl = "",
+                            InStock = true,
+                            Name = "Celular",
+                            Price = 5000m,
+                            Quantity = 8
                         });
                 });
 
@@ -192,10 +299,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -247,10 +350,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
-
-                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -332,32 +431,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("BackEnd.Project.Models.ApplicationUser", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PostalCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("BackEnd.Project.Models.Product", b =>

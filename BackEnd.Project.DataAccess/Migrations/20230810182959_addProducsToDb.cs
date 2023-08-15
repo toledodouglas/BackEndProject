@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BackEnd.Project.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class addProductToDb : Migration
+    public partial class addProducsToDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,13 +32,6 @@ namespace BackEnd.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StreetAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    State = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PostalCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CompanyId = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -209,7 +204,15 @@ namespace BackEnd.Project.DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "Description", "ImageUrl", "InStock", "Name", "Price", "ProductId", "Quantity" },
-                values: new object[] { 1, "Mouse", "", true, "Mouse", 10m, null, 5 });
+                values: new object[,]
+                {
+                    { 1, "Mouse", "", true, "Mouse", 180m, null, 5 },
+                    { 2, "Teclado", "", true, "Teclado", 200m, null, 10 },
+                    { 3, "Monitor", "", true, "Monitor", 1500m, null, 10 },
+                    { 4, "Fone sem fio", "", true, "Fone", 150m, null, 20 },
+                    { 5, "Notebook gamer", "", true, "Notebook", 4000m, null, 15 },
+                    { 6, "IPhone", "", true, "Celular", 5000m, null, 8 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
