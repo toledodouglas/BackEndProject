@@ -1,12 +1,6 @@
 ﻿using BackEnd.Project.DataAccess.Data;
 using BackEnd.Project.DataAccess.Repository.IRepository;
-using BackEnd.Project.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BackEnd.Project.DataAccess.Repository
 {
