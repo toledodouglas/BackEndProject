@@ -26,3 +26,17 @@ C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.Models\obj\D
 C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.pdb
 C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.genruntimeconfig.cache
 C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\ref\BackEnd.Project.Models.dll
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\bin\Debug\net7.0\BackEnd.Project.Models.deps.json
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\bin\Debug\net7.0\BackEnd.Project.Models.runtimeconfig.json
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\bin\Debug\net7.0\BackEnd.Project.Models.dll
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\bin\Debug\net7.0\BackEnd.Project.Models.pdb
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.csproj.AssemblyReference.cache
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.AssemblyInfoInputs.cache
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.AssemblyInfo.cs
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.csproj.CoreCompileInputs.cache
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.dll
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\refint\BackEnd.Project.Models.dll
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.pdb
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\BackEnd.Project.Models.genruntimeconfig.cache
+C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.Models\obj\Debug\net7.0\ref\BackEnd.Project.Models.dll

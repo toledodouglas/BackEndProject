@@ -16,9 +16,8 @@ namespace BackEnd.Project.Web.Controllers
 
         public IActionResult List()
         {
-            //ViewData["Title"] = "All Products";
-            //ViewData["Date"] = DateTime.Now;
-
+            ViewData["Title"] = "All Products";
+            ViewData["Date"] = DateTime.Now;
 
             var Products = _unitOfWork.Product.GetAll();
             return View(Products);
@@ -30,25 +29,30 @@ namespace BackEnd.Project.Web.Controllers
 
         public IActionResult RemoveProduct(Product product)
         {
+
+            var productToBeDeleted = _unitOfWork.Product.FindById(product.Id);
+
             //var productToBeDeleted = _productRepository.Product.Get(u => u.Id == id);
             //var productListViewModel =
             //     _productRepository.ProductListViewModel.SingleOrDefault(
             //        s => s.Product.Id == product.Id && s.ProductListViewModel == ProductListViewModel);
             //var quantidadeLocal = 0; 
 
-            //if (productListViewModel != null)
-            //{
-            //    if(productListViewModel.Quantidade > 1)
-            //    {
-            //        productListViewModel.Quantidade--;
-            //        quantidadeLocal = productListViewModel.Quantidade;
-            //    }
-            //    else
-            //    {
-            //        _productRepository.ProductListViewModel.Remove(productListViewModel);
-            //    }
-            //}
-            //_productRepository.SaveChanges();
+            if (productToBeDeleted != null)
+            {
+                if (productToBeDeleted.Products.Count > 1)
+                {
+                    productToBeDeleted.Quantity--;
+                    //quantidadeLocal = productListViewModel.Quantidade;
+                }
+                else
+                {
+                    //_productRepository.ProductListViewModel.Remove(productListViewModel);
+                    _unitOfWork.Product.Remove(productToBeDeleted);
+                }
+            }
+            _unitOfWork.Save();
+            
             return View();
         }
 

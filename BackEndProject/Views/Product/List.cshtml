@@ -1,17 +1,23 @@
-﻿
-@model List<Product>;
+﻿@model IEnumerable<Product>;
 
-
+@ViewData["Title"];
+@ViewData["Date"];
 
 <div class="container">
-<div class="row">
-@foreach(var Product in Model.OrderBy(u=>u.Products))
-{
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <h4>@Product.Name</h4>
-        <p>Descrição: @Product.Description</p>
-        <p>Preço: @Product.Price.ToString("c")</p>
+    <div class="row">
+        @foreach (var Product in Model)
+        {
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h4>@Product.Name</h4>
+                <p>Descrição: @Product.Description</p>
+                <p>Preço: @Product.Price.ToString("c")</p>
+            </div>
+        }
     </div>
-}
 </div>
-</div>
+
+
+
+
+
+

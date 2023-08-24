@@ -18,11 +18,13 @@ builder.Services.AddDbContext<AppDbContext>(Options =>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
     .AddEntityFrameworkStores<AppDbContext>();
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddControllers();
 
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
 var app = builder.Build();
 
