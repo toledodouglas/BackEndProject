@@ -67,7 +67,7 @@ namespace BackEnd.Project.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clients");
+                    b.ToTable("Clients", (string)null);
 
                     b.HasData(
                         new
@@ -167,7 +167,7 @@ namespace BackEnd.Project.DataAccess.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
 
                     b.HasData(
                         new

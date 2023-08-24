@@ -19,6 +19,9 @@ namespace BackEnd.Project.DataAccess.Repository
             return query.FirstOrDefault();
         }
 
-      
+        public void Remove(T entity)
+        {
+            DbSet.Remove(entity);
+        }
     }
 }
