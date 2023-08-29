@@ -20,3 +20,52 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.menagementBox_List {
+    border-top: 1px solid black;
+    padding: 1.5rem 0;
+    margin: 2rem 0rem;
+}
+
+.main_button{
+    margin: 2rem 0;
+}
+
+.button_created {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background-color: #ffffff;
+    border-radius: 0.188rem;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 0.813rem;
+    font-weight: bold;
+    padding: 0.375rem 1.5rem;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+    .button_created:hover {
+        background-color: #f6f6f6;
+    }
+
+.button_removed {
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background-color: #d0451b;
+    border-radius: 0.188rem;
+    border: 1px solid #942911;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 0.813rem;
+    padding: 0.375rem 1.5rem;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+}
+
+    .button_removed:hover {
+    background-color: #bc3315;
+}
+
+
+

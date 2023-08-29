@@ -15,23 +15,6 @@ C:\Users\douglas.toledo\OneDrive - Valtech\Bureau\ProjetoLanches\BackEndProject\
 C:\Users\douglas.toledo\OneDrive - Valtech\Bureau\ProjetoLanches\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.pdb
 C:\Users\douglas.toledo\OneDrive - Valtech\Bureau\ProjetoLanches\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.genruntimeconfig.cache
 C:\Users\douglas.toledo\OneDrive - Valtech\Bureau\ProjetoLanches\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\ref\BackEnd.Project.DataAccess.dll
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.deps.json
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.runtimeconfig.json
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.dll
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.pdb
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.Models.dll
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.Models.pdb
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.csproj.AssemblyReference.cache
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.AssemblyInfoInputs.cache
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.AssemblyInfo.cs
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.csproj.CopyComplete
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.dll
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\refint\BackEnd.Project.DataAccess.dll
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.pdb
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.genruntimeconfig.cache
-C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\ref\BackEnd.Project.DataAccess.dll
 C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.deps.json
 C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.runtimeconfig.json
 C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.dll
@@ -49,3 +32,20 @@ C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\ob
 C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.pdb
 C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.genruntimeconfig.cache
 C:\Users\willian.silva\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\ref\BackEnd.Project.DataAccess.dll
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.deps.json
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.runtimeconfig.json
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.dll
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.DataAccess.pdb
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.Models.dll
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\bin\Debug\net7.0\BackEnd.Project.Models.pdb
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.csproj.AssemblyReference.cache
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.AssemblyInfoInputs.cache
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.AssemblyInfo.cs
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.csproj.CopyComplete
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.dll
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\refint\BackEnd.Project.DataAccess.dll
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.pdb
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\BackEnd.Project.DataAccess.genruntimeconfig.cache
+C:\Users\douglas.toledo\source\repos\BackEndProject\BackEnd.Project.DataAccess\obj\Debug\net7.0\ref\BackEnd.Project.DataAccess.dll
