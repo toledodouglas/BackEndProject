@@ -2,9 +2,11 @@
 
 namespace BackEnd.Project.DataAccess.Repository.IRepository
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T> where T : Entity
     {
         T FindById(int id);
         void Remove(T entity);
+        void Add(T entity);
+
     }
 }

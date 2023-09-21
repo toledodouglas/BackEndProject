@@ -4,19 +4,26 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BackEnd.Project.DataAccess.Repository
 {
-    public class UnitOfWork :IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private AppDbContext _db;
         public IProductRepository Product { get; private set; }
+
+        public IClientRepository Client { get; private set; }
+
+        
         public UnitOfWork(AppDbContext db)
         {
             _db = db;
             Product = new ProductRepository(_db);
+            Client = new ClientRepository(_db);
         }
 
         public void Save()
         {
             _db.SaveChanges();
         }
+
+      
     }
 }

@@ -5,12 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BackEnd.Project.Models
 {
-    public class Product
+    public class Product : Entity
     {
-        [Key]
-        [Column("Id")]
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "O nome é obrigatório.")]
         [StringLength(100, ErrorMessage = "O nome deve ter no máximo 100 caracteres.")]
         public string Name { get; set; }
@@ -32,10 +28,5 @@ namespace BackEnd.Project.Models
         [Display(Name = "Quantidade em estoque")]
         [Required(ErrorMessage = "O estoque é obrigatório.")]
         public int Quantity { get; set; }
-
-        [Display(Name = "Estoque")]
-        public bool InStock { get; set; }
-
-        public List<Product> Products { get; set; }
     }
 }

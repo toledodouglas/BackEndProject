@@ -1,4 +1,5 @@
-﻿using BackEnd.Project.DataAccess.Repository;
+﻿using BackEnd.Project.DataAccess.Data;
+using BackEnd.Project.DataAccess.Repository;
 using BackEnd.Project.DataAccess.Repository.IRepository;
 using BackEnd.Project.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +15,7 @@ namespace BackEnd.Project.Web.Controllers
 
         }
 
-        public IActionResult List()
+        public IActionResult ListProduct()
         {
             ViewData["Title"] = "All Products";
 
@@ -28,38 +29,51 @@ namespace BackEnd.Project.Web.Controllers
 
             var productToBeDeleted = _unitOfWork.Product.FindById(product.Id);
 
-
-            //if (productToBeDeleted != null)
-            //{
-            //    if (productToBeDeleted.Products.Count > 1)
-            //    {
-            //        productToBeDeleted.Quantity--;                 
-            //    }
-            //    else
-            //    {
-            //        _unitOfWork.Product.Remove(productToBeDeleted);
-            //    }
-            //}
             _unitOfWork.Product.Remove(productToBeDeleted);
             _unitOfWork.Save();
             
+            return View(ListProduct);
+        }
+
+        [HttpGet]
+        public IActionResult CreateProduct()
+        {
             return View();
         }
 
-        public IActionResult CreateProducts(Product product)
+        [HttpPost]
+        public IActionResult CreateProduct(Product product)
         {
-            Product productToBeCreated = new Product()
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Price = product.Price,
-                Description = product.Description,
-                Quantity = product.Quantity,
-                InStock = product.InStock,
-            };
-            _unitOfWork.Save();
-            return View(productToBeCreated);
+             
+                _unitOfWork.Product.Add(product);
 
+            
+
+            _unitOfWork.Save();
+            return View();
+
+
+        }
+
+        [HttpPost]
+        public IActionResult UpdateProduct(Product updatedProduct)
+        {
+            using (var context = new AppDbContext())
+            {
+                var existingProduct = context.Products.Find(updatedProduct.Id);
+
+                if (existingProduct != null)
+                {
+                    existingProduct.Name = updatedProduct.Name;
+                    existingProduct.Description = updatedProduct.Description;
+                    existingProduct.Price = updatedProduct.Price;
+                    existingProduct.Quantity = updatedProduct.Quantity;
+
+                    _unitOfWork.Save();
+                }
+                    return View(existingProduct);
+
+            }
         }
 
     }

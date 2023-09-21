@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BackEnd.Project.Models
 {
-    public class Client
+    public class Client : Entity
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "O nome é obrigatório.")]
         [StringLength(100, ErrorMessage = "O nome deve ter no máximo 100 caracteres.")]
         public string Name { get; set; }

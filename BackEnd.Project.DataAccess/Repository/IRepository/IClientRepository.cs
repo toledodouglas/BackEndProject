@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BackEnd.Project.DataAccess.Repository.IRepository
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface IClientRepository : IRepository<Client>
     {
-        IEnumerable<Product> GetAll();
+        IEnumerable<Client> GetAll();
     }
 }

@@ -3,7 +3,9 @@
     public interface IUnitOfWork
     {
         IProductRepository Product { get; }
+        IClientRepository Client { get; }
         void Save();
 
+        
     }
 }
