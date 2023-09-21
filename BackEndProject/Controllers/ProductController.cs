@@ -1,6 +1,4 @@
-﻿using BackEnd.Project.DataAccess.Data;
-using BackEnd.Project.DataAccess.Repository;
-using BackEnd.Project.DataAccess.Repository.IRepository;
+﻿using BackEnd.Project.DataAccess.Repository.IRepository;
 using BackEnd.Project.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,13 +13,14 @@ namespace BackEnd.Project.Web.Controllers
 
         }
 
+
         public IActionResult ListProduct()
         {
             ViewData["Title"] = "All Products";
 
             var Products = _unitOfWork.Product.GetAll();
             return View(Products);
-            
+
         }
 
         public IActionResult RemoveProduct(Product product)
@@ -31,7 +30,7 @@ namespace BackEnd.Project.Web.Controllers
 
             _unitOfWork.Product.Remove(productToBeDeleted);
             _unitOfWork.Save();
-            
+
             return View(ListProduct);
         }
 
@@ -44,36 +43,32 @@ namespace BackEnd.Project.Web.Controllers
         [HttpPost]
         public IActionResult CreateProduct(Product product)
         {
-             
-                _unitOfWork.Product.Add(product);
-
-            
+            _unitOfWork.Product.Add(product);
 
             _unitOfWork.Save();
             return View();
+        }
 
-
+        public IActionResult Edit()
+        {
+            return View();
         }
 
         [HttpPost]
         public IActionResult UpdateProduct(Product updatedProduct)
         {
-            using (var context = new AppDbContext())
+            Product existingProduct = _unitOfWork.Product.FindById(updatedProduct.Id);
+
+            if (existingProduct != null)
             {
-                var existingProduct = context.Products.Find(updatedProduct.Id);
+                existingProduct.Name = updatedProduct.Name;
+                existingProduct.Description = updatedProduct.Description;
+                existingProduct.Price = updatedProduct.Price;
+                existingProduct.Quantity = updatedProduct.Quantity;
 
-                if (existingProduct != null)
-                {
-                    existingProduct.Name = updatedProduct.Name;
-                    existingProduct.Description = updatedProduct.Description;
-                    existingProduct.Price = updatedProduct.Price;
-                    existingProduct.Quantity = updatedProduct.Quantity;
-
-                    _unitOfWork.Save();
-                }
-                    return View(existingProduct);
-
+                _unitOfWork.Save();
             }
+            return View(existingProduct);
         }
 
     }
