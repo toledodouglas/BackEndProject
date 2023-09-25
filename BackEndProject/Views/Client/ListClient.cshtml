@@ -3,7 +3,7 @@
 <div class="container">
     <h1 class="main_title">Client Control</h1>
     <div class="main_button">
-        <a asp-controller="Client" asp-action="CreateProduct" class="button_listCreated">Add new Client</a>
+        <a asp-controller="Client" asp-action="CreateClient" class="button_listCreated">Add new Client</a>
     </div>
     <div>
         @ViewData["Title"];
@@ -21,6 +21,8 @@
                         <p class="menagementBox_city">@client.City</p>
                         <div>
                             <a asp-controller="Client" asp-action="RemoveClient" class="button_removed">Remove </a>
+                            <a asp-controller="Client" asp-action="UniqueClient" class="button_removed">More Info</a>
+                            <a asp-controller="Client" asp-action="EditClient" class="button_removed">Edit Product</a>
                         </div>
                     </div>
                 }

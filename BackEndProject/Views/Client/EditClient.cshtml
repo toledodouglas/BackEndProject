@@ -1,7 +1,7 @@
 ﻿@model Client
 
 <div>
-    <h1>New Client</h1>
+    <h1>Update</h1>
     <div>
         <div>
             <form method="post" class="row" enctype="multipart/form-data">
@@ -40,7 +40,7 @@
             </form>
         </div>
         <div>
-            <input type="submit" asp-controller="Client" asp-action="CreateClient" class="button_Create">Create/>
+            <input type="submit" asp-controller="Product" asp-action="UpdateClient" class="button_Create">Update/>
             <a asp-controller="Client" asp-action="ListClient" class="button_Create">Return to list</a>
         </div>
     </div>

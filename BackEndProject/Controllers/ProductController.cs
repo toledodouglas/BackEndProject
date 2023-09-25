@@ -22,6 +22,10 @@ namespace BackEnd.Project.Web.Controllers
             return View(Products);
 
         }
+        public IActionResult UniqueProduct()
+        {
+            return View();
+        }
 
         public IActionResult RemoveProduct(Product product)
         {
@@ -49,7 +53,8 @@ namespace BackEnd.Project.Web.Controllers
             return View();
         }
 
-        public IActionResult Edit()
+        [HttpGet]
+        public IActionResult EditProduct()
         {
             return View();
         }
