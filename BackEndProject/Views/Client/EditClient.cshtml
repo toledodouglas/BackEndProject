@@ -1,0 +1,47 @@
+﻿@model Client
+
+<div>
+    <h1>Update</h1>
+    <div>
+        <div>
+            <form method="post" class="row" enctype="multipart/form-data">
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Id" hidden class="form-control border-0 shadow" />
+                    <label asp-for="Id" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Name" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="CPF" class="form-control border-0 shadow" />
+                    <label asp-for="CPF" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Email" class="form-control border-0 shadow" />
+                    <label asp-for="Email" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="CellPhone" class="form-control border-0 shadow" />
+                    <label asp-for="CellPhone" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Street" class="form-control border-0 shadow" />
+                    <label asp-for="Street" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="State" class="form-control border-0 shadow" />
+                    <label asp-for="State" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="City" class="form-control border-0 shadow" />
+                    <label asp-for="City" class="ms-2"></label>
+                </div>
+            </form>
+        </div>
+        <div>
+            <input type="submit" asp-controller="Product" asp-action="UpdateClient" class="button_Create">Update/>
+            <a asp-controller="Client" asp-action="ListClient" class="button_Create">Return to list</a>
+        </div>
+    </div>
+</div>

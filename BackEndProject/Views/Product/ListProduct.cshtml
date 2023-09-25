@@ -17,7 +17,8 @@
                         <p class="menagementBox_Price">Preço: @Product.Price.ToString("c")</p>
                         <div>
                             <a asp-controller="Product" asp-action="RemoveProduct" class="button_removed">Remove </a>
-                            <a asp-controller="Product" asp-action="UpdateProduct" class="button_removed">Edit </a>
+                            <a asp-controller="Product" asp-action="UniqueProduct" class="button_removed">More Info</a>
+                            <a asp-controller="Product" asp-action="EditProduct" class="button_removed">Edit Product</a>
                         </div>
                     </div>
                 }

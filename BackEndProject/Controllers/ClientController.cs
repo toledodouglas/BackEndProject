@@ -23,6 +23,11 @@ namespace BackEnd.Project.Web.Controllers
 
         }
 
+        public IActionResult UniqueClient()
+        {
+            return View(UniqueClient);
+        }
+
         public IActionResult RemoveClient(Client client)
         {
 
@@ -54,11 +59,15 @@ namespace BackEnd.Project.Web.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult EditClient()
+        {
+            return View(EditClient);
+        }
+
         public IActionResult UpdateClient(Client updatedClient)
         {
-            using (var context = new AppDbContext())
-            {
-                var existingClient = context.Clients.Find(updatedClient.Id);
+                Client existingClient = _unitOfWork.Client.FindById(updatedClient.Id);
 
                 if (existingClient != null)
                 {
@@ -72,9 +81,7 @@ namespace BackEnd.Project.Web.Controllers
 
                     _unitOfWork.Save();
                 }
-                    return View(existingClient);
-
-            }
+            return View(existingClient);      
         }
     }
 }

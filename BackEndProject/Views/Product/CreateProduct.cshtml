@@ -4,8 +4,7 @@
     <h1>New Product</h1>
     <div>
         <form method="post" action="CreateProduct" class="row" enctype="multipart/form-data">
-        <div>
-            
+            <div>
                 <div hidden class="form-floating py-2 col-12">
                     <input asp-for="Id" class="form-control border-0 shadow" />
                     <label asp-for="Id" class="ms-2"></label>
@@ -26,11 +25,12 @@
                     <input asp-for="Quantity" class="form-control border-0 shadow" />
                     <label asp-for="Quantity" class="ms-2"></label>
                 </div>
-            
-        </div>
+            </div>
         <div>
-            <input type="submit" asp-controller="Product" asp-action="CreateProduct" class="button_Create">Create</input>
-            <a asp-controller="Product" asp-action="ListProduct" class="button_Create">Return to list</a>
+            <input type="submit" asp-controller="Product" asp-action="CreateProduct" class="button_Create">Create/>
+                <a asp-controller="Product" asp-action="ListProduct" class="btn btn-outline-primary border form-control">
+                    Back to List
+                </a>
         </div>
         </form>
     </div>
