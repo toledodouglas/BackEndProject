@@ -5,22 +5,26 @@
     <div class="main_button">
         <a asp-controller="Product" asp-action="CreateProduct" class="button_listCreated">Add new Product</a>
     </div>
+
     <div>
         @ViewData["Title"];
         <div class="main_managementBox">
             <div class="managementBox">
                 @foreach (var Product in Model)
                 {
-                    <div class="menagementBox_List">
-                        <h4 class="menagementBox_Name">@Product.Name</h4>
-                        <p class="menagementBox_Description">Descrição: @Product.Description</p>
-                        <p class="menagementBox_Price">Preço: @Product.Price.ToString("c")</p>
-                        <div>
-                            <a asp-controller="Product" asp-action="RemoveProduct" class="button_removed">Remove </a>
-                            <a asp-controller="Product" asp-action="UniqueProduct" class="button_removed">More Info</a>
-                            <a asp-controller="Product" asp-action="EditProduct" class="button_removed">Edit Product</a>
+                    <form method="post" class="row" enctype="multipart/form-data">
+                        <input asp-for="@Product.Id" hidden />
+                        <div class="menagementBox_List">
+                            <h4 class="menagementBox_Name">@Product.Name</h4>
+                            <p class="menagementBox_Description">Descrição: @Product.Description</p>
+                            <p class="menagementBox_Price">Preço: @Product.Price.ToString("c")</p>
+                            <div>
+                                <button type="submit" asp-controller="Product" asp-action="RemoveProduct" class="button_removed">Remove </button>
+                                <a asp-controller="Product" asp-action="UniqueProduct" class="button_removed">More Info</a>
+                                <a asp-controller="Product" asp-action="EditProduct" class="button_removed">Edit Product</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 }
             </div>
         </div>

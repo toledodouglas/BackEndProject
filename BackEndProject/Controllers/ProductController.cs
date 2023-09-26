@@ -35,7 +35,7 @@ namespace BackEnd.Project.Web.Controllers
             _unitOfWork.Product.Remove(productToBeDeleted);
             _unitOfWork.Save();
 
-            return View(ListProduct);
+            return View();
         }
 
         [HttpGet]
@@ -71,8 +71,8 @@ namespace BackEnd.Project.Web.Controllers
                 existingProduct.Price = updatedProduct.Price;
                 existingProduct.Quantity = updatedProduct.Quantity;
 
-                _unitOfWork.Save();
             }
+            _unitOfWork.Save();
             return View(existingProduct);
         }
 
