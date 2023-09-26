@@ -35,7 +35,7 @@ namespace BackEnd.Project.Web.Controllers
             _unitOfWork.Product.Remove(productToBeDeleted);
             _unitOfWork.Save();
 
-            return View(ListProduct);
+            return View();
         }
 
         [HttpGet]

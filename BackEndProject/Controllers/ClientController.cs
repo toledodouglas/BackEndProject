@@ -25,7 +25,7 @@ namespace BackEnd.Project.Web.Controllers
 
         public IActionResult UniqueClient()
         {
-            return View(UniqueClient);
+            return View();
         }
 
         public IActionResult RemoveClient(Client client)
@@ -36,7 +36,7 @@ namespace BackEnd.Project.Web.Controllers
             _unitOfWork.Client.Remove(productToBeDeleted);
             _unitOfWork.Save();
 
-            return View(ListClient);
+            return View();
         }
 
         [HttpGet]
