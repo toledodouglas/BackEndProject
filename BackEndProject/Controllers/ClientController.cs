@@ -23,9 +23,11 @@ namespace BackEnd.Project.Web.Controllers
 
         }
 
-        public IActionResult UniqueClient()
+        [HttpGet]
+        public ActionResult UniqueClient(int id)
         {
-            return View();
+            var UniqueClient = _unitOfWork.Client.FindById(id);
+            return View(UniqueClient);
         }
 
         public IActionResult RemoveClient(Client client)
@@ -40,13 +42,13 @@ namespace BackEnd.Project.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateProduct()
+        public IActionResult CreateClient()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult CreateProduct(Client client)
+        public IActionResult CreateClient(Client client)
         {
 
             _unitOfWork.Client.Add(client);
@@ -62,7 +64,7 @@ namespace BackEnd.Project.Web.Controllers
         [HttpGet]
         public IActionResult EditClient()
         {
-            return View(EditClient);
+            return View();
         }
 
         public IActionResult UpdateClient(Client updatedClient)

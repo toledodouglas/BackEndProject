@@ -1,12 +1,16 @@
 ﻿@model Product 
 
 <div>
+    <input asp-for="Id" hidden />
     <h4>@Model.Name</h4>
     <p>@Model.Price.ToString("c")</p>
     <p>@Model.Description</p>
     <div>
         <a asp-controller="Product" asp-action="EditProduct" class="btn btn-outline-primary border form-control">
-            Back to List
+            Edit Product
+        </a>
+        <a asp-controller="Product" asp-action="ListProduct" class="btn btn-outline-primary border form-control">
+            Return to list
         </a>
     </div>
 </div>

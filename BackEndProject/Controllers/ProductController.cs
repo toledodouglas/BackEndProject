@@ -22,9 +22,12 @@ namespace BackEnd.Project.Web.Controllers
             return View(Products);
 
         }
-        public IActionResult UniqueProduct()
+
+        [HttpGet]
+        public ActionResult UniqueProduct(int id)
         {
-            return View();
+            var UniqueProduct = _unitOfWork.Product.FindById(id);
+            return View(UniqueProduct);
         }
 
         public IActionResult RemoveProduct(Product product)
@@ -48,7 +51,6 @@ namespace BackEnd.Project.Web.Controllers
         public IActionResult CreateProduct(Product product)
         {
             _unitOfWork.Product.Add(product);
-
             _unitOfWork.Save();
             return View();
         }
@@ -71,8 +73,8 @@ namespace BackEnd.Project.Web.Controllers
                 existingProduct.Price = updatedProduct.Price;
                 existingProduct.Quantity = updatedProduct.Quantity;
 
-                _unitOfWork.Save();
             }
+            _unitOfWork.Save();
             return View(existingProduct);
         }
 

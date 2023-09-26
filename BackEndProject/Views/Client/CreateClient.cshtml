@@ -37,11 +37,11 @@
                     <input asp-for="City" class="form-control border-0 shadow" />
                     <label asp-for="City" class="ms-2"></label>
                 </div>
-            </form>
-        </div>
         <div>
-            <input type="submit" asp-controller="Client" asp-action="CreateClient" class="button_Create">Create/>
+            <button type="submit" asp-controller="Client" asp-action="CreateClient" class="button_Create"></button>
             <a asp-controller="Client" asp-action="ListClient" class="button_Create">Return to list</a>
+        </div>
+            </form>
         </div>
     </div>
 </div>

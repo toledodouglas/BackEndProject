@@ -20,8 +20,5 @@ namespace BackEnd.Project.DataAccess.Repository
             return _db.Products.AsEnumerable();
         }
 
-        
-
-
     }
 }

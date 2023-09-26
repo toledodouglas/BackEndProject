@@ -21,14 +21,17 @@ namespace BackEnd.Project.DataAccess.Repository
             return query.FirstOrDefault(x => x.Id == id);
 
         }
+   
+        public void Add(T entity)
+        {
+            DbSet.Add(entity);
+        }
 
         public void Remove(T entity)
         {
             DbSet.Remove(entity);
         }
-        public void Add(T entity)
-        {
-            DbSet.Add(entity);
-        }
+
+       
     }
 }

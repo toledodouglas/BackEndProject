@@ -9,22 +9,25 @@
         @ViewData["Title"];
         <div class="main_managementBox">
             <div class="managementBox">
-                @foreach (var client in Model)
+                @foreach (var Client in Model)
                 {
-                    <div class="menagementBox_List">
-                        <h4 class="menagementBox_Name">@client.Name</h4>
-                        <p class="menagementBox_CPF">Descrição: @client.CPF</p>
-                        <p class="menagementBox_email">@client.Email</p>
-                        <p class="menagementBox_phoneNumber">@client.CellPhone</p>
-                        <p class="menagementBox_street">@client.Street</p>
-                        <p class="menagementBox_state">@client.State</p>
-                        <p class="menagementBox_city">@client.City</p>
-                        <div>
-                            <a asp-controller="Client" asp-action="RemoveClient" class="button_removed">Remove </a>
-                            <a asp-controller="Client" asp-action="UniqueClient" class="button_removed">More Info</a>
-                            <a asp-controller="Client" asp-action="EditClient" class="button_removed">Edit Product</a>
+                    <form method="post" class="row" enctype="multipart/form-data">
+                        <input asp-for="@Client.Id" hidden />
+                        <div class="menagementBox_List">
+                            <h4 class="menagementBox_Name">@Client.Name</h4>
+                            <p class="menagementBox_CPF">Descrição: @Client.CPF</p>
+                            <p class="menagementBox_email">@Client.Email</p>
+                            <p class="menagementBox_phoneNumber">@Client.CellPhone</p>
+                            <p class="menagementBox_street">@Client.Street</p>
+                            <p class="menagementBox_state">@Client.State</p>
+                            <p class="menagementBox_city">@Client.City</p>
+                            <div>
+                                <button type="submit" asp-controller="Client" asp-action="RemoveClient" class="button_removed">Remove </button>
+                                <a asp-controller="Client" asp-action="UniqueClient" asp-route-id="@Client.Id" class="button_removed">More Info</a>
+                                <a asp-controller="Client" asp-action="EditClient" class="button_removed">Edit Product</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 }
             </div>
         </div>

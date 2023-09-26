@@ -1,11 +1,20 @@
 ﻿@model Client
 
-<div class="controlInfo">
-    @Model.Name
-    @Model.CPF
-    @Model.Email
-    @Model.CellPhone
-    @Model.Street
-    @Model.State
-    @Model.City
+<div>
+    <input asp-for="Id" hidden />
+        <h4 class="menagementBox_Name">@Model.Name</h4>
+        <p class="menagementBox_CPF">@Model.CPF</p>
+        <p class="menagementBox_email">@Model.Email</p>
+        <p class="menagementBox_phoneNumber">@Model.CellPhone</p>
+        <p class="menagementBox_street">@Model.Street</p>
+        <p class="menagementBox_state">@Model.State</p>
+        <p class="menagementBox_city">@Model.City</p>
+    <div>
+        <a asp-controller="Client" asp-action="EditClient" class="btn btn-outline-primary border form-control">
+            Edit Client
+        </a>
+        <a asp-controller="Client" asp-action="ListClient" class="btn btn-outline-primary border form-control">
+            Return to list
+        </a>
+    </div>
 </div>
